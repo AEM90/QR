@@ -30,4 +30,4 @@ def qrgen2(data):
     )
 
     qrcode.save('static/img/mecard.svg', scale=7)
-    return 'img/mecard.svg'
+    return 'static/img/mecard.svg'

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 {% if qr_code_image %}
-    <img src="{{ url_for('static', filename=qr_code_image) }}" alt="QR Code" >
+    <img src="{{qr_code_image}}" alt="QR Code" >
 
     <div class="button-container">
       <button><a href="{{ qr_code_image }}" download>Download QR Code</a></button>
