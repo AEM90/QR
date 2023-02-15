@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block titel %}Share Businesscard{% endblock %}
+{% block content %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const inputs = Array.from(
+    document.querySelectorAll('input[name=phone], input[name=email]')
+  );
+
+  const inputListener = e => {
+    inputs
+      .filter(i => i !== e.target)
+      .forEach(i => (i.required = !e.target.value.length));
+  };
+
+  inputs.forEach(i => i.addEventListener('input', inputListener));
+});
+</script>
+
+
+{% if qr_code_image %}
+    <img src="{{ url_for('static', filename=qr_code_image) }}" alt="QR Code" >
+
+    <div class="button-container">
+      <button><a href="{{ qr_code_image }}" download>Download QR Code</a></button>
+    </div>
+
+{% else %}
+    <h1>Enter your Information</h1>
+    <form method="post">
+
+        <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+
+        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+
+        <input type="text" id="company" name="company"  placeholder="Company">
+
+        <input type="text" id="street" name="street"  placeholder="Street">
+
+        <input type="text" id="zipcode" name="zipcode"  placeholder="Zipcode">
+
+        <input type="text" id="region" name="region"  placeholder="Region">
+
+        <input type="text" id="city" name="city"  placeholder="City">
+
+        <input type="text" id="job_title" name="job_title" placeholder="Job Title">
+
+        <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+
+        <input type="email" id="email" name="email" placeholder="E-Mail Adress" required>
+
+        <input type="text" id="url" name="url" placeholder="Your Website URL">
+
+        <input type="text" id="note" name="note" placeholder="Further Notes">
+
+        <input type="submit" value="Submit">
+    </form>
+{% endif %}
+
+{% endblock %}

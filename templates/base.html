@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="static/css/template.css" rel="stylesheet" />
+    <link href="static/css/form.css" rel="stylesheet" />
+    <title>{% block title %}{% endblock %}</title>
+
+</head>
+<body>
+<!-- template -->
+    <div id="navbar">
+      <ul>
+        <li><span id="navbartitle"><a href="www.babathings.com"> Babathings</a></span></li>
+        <!--<li><a href="#">Home</a></li>-->
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <!-- mainpart -->
+    <div id="subbody">
+     {% block content %}{% endblock %}
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+      Copyright &copy; Dudul
+    </div>
+<!-- template ende -->
+
+
+</body>
+</html>

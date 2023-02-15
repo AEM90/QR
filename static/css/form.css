@@ -1,0 +1,57 @@
+/* Form styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+}
+
+.button-container a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Oswald";
+  font-size: 17px;
+}
+
+#subbody p {
+    text-align: center;
+    font-family: "Oswald";
+}

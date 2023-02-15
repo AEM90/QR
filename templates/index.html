@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block titel %}QR Cards{% endblock %}
+{% block content %}
+ <p><a href="{{ url_for('vcard') }}"><img class="icon-link-style-klein" src="static/img/style_icons/id-card.png"></a>
+ <br>Create your Contact QR code!</p>
+ <br> <br>
+ <p><a href="{{ url_for('instagram') }}"><img class="icon-link-style-groß" src="static/img/style_icons/socialmedia-icon.png"></a>
+ <br>Create your Social Media QR code!</p>
+{% endblock %}
