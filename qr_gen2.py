@@ -1,5 +1,4 @@
 from segno import helpers
-import segno
 
 
 def qrgen2(data):

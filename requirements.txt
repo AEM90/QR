@@ -8,3 +8,4 @@ Werkzeug==2.2.2
 Pillow
 gunicorn
 PyQRCode~=1.2.1
+segno
